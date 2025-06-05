@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componente personalizado</title>
+    <script defer type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <main>
+      <div class="drop" id="drop-menu">
+        <button class="drop__btn" aria-expanded="false" aria-haspopup="true" type="button"></button>
+        <div class="drop__items" data-items>
+          <div class="drop__items-inner">
+            <button class="drop__btn" type="button" value="windows">Windows</button>
+            <button class="drop__btn" type="button" value="mac">Mac</button>
+            <button class="drop__btn" type="button" value="linux">Linux</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
