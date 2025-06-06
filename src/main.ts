@@ -1,11 +1,12 @@
-import { DropMenu, TDropItem } from "./DropMenu"
+import { DropMenu } from "./DropMenu"
 import "./styles.scss"
 
-const itemDefault = {key:"windows", name:"Windows"}
-const opciones: TDropItem[] = [
-    itemDefault, 
-    {key:"mac", name:"Mac"},
-    {key:"linux", name:"Linux"}
-]
 
-new DropMenu("#drop-menu", opciones, itemDefault)
+new DropMenu({
+    selector: "#drop-menu",
+    itemSelected: {
+        key: "mac",
+        name: "Mac"
+    },
+    onChange: item => console.log(item)
+})

@@ -7,8 +7,8 @@
 
 :root {
 	--hue: 223;
-	--bg: hsl(0,0%,100%);
-	--fg: hsl(var(--hue),10%,10%);
+	--bg: hsl(0, 0%, 100%);
+	--fg: hsl(var(--hue), 10%, 10%);
 	font-size: calc(20px + (40 - 20) * (100vw - 280px) / (3840 - 280));
 }
 
@@ -40,12 +40,12 @@ main {
 	padding: 0.25em 0.25em 0 0.25em;
 	position: relative;
 	min-width: 9em;
-
+	height: 100%;
 
 	&__btn {
-		background-color: hsl(0,0%,100%);
+		background-color: hsl(0, 0%, 100%);
 		border-radius: 0.375em;
-		box-shadow: 0 0 0 0.25em hsla(var(--hue),90%,50%,0);
+		box-shadow: 0 0 0 0.25em hsla(var(--hue), 90%, 50%, 0);
 		cursor: pointer;
 		display: block;
 		width: 100%;
@@ -54,6 +54,44 @@ main {
 		outline: transparent;
 		margin-bottom: 0.25em;
 		padding: 0.75em;
+
+		&__home {
+			&:after {
+				border: {
+					top: 0.375em solid currentColor;
+					right: 0.375em solid transparent;
+					left: 0.375em solid transparent;
+				}
+
+				content: "";
+				display: block;
+				margin-inline-start: auto;
+				width: 0;
+				height: 0;
+				transform-origin: 50% 37.5%;
+				transition: transform var(--drop-trans-dur) var(--trans-ease-out);
+			}
+
+			&--active {
+				&::after {
+					transform: rotate(0.5turn);
+				}
+			}
+		}
+
+		&--active {
+			position: relative;
+			&:after {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				border: 0;
+				content: "\2713";
+				display: block;
+				width: auto;
+				height: auto;
+			}
+		}
 	}
 
 	&__items {
@@ -61,8 +99,8 @@ main {
 			display: none;
 		}
 
-		&--expanding &-inner{
-			display: block;			
+		&--expanding &-inner {
+			display: block;
 		}
 	}
 
