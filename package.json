@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/node": "^22.15.30",
     "sass": "^1.77.2",
+    "terser": "^5.41.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
