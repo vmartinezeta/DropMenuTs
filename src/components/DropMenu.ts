@@ -1,27 +1,7 @@
-interface IDropMenuProps{
-    selector:string
-    itemSelected:TDropItem
-    onChange: (item: TDropItem) => void
-}
+import { IDropMenu } from "@/IDropMenu"
+import { IDropMenuProps } from "@interfaces/IDropMenuProps"
+import { TDropItem } from "@interfaces/TDropItem"
 
-interface IDropMenu{
-    container: HTMLDivElement | null
-    menuButton:HTMLButtonElement | null | undefined
-    items: HTMLDivElement | null | undefined
-    itemSelected: TDropItem
-    opciones: TDropItem[]
-    abierto: boolean
-    onChange: (item:TDropItem) => void
-    cambiarItem: (event: Event) => void
-    toggle: () => void
-    abrir:() => void
-    resetButtons: () => void
-}
-
-export type TDropItem = {
-    key: string
-    name: string
-}
 
 export class DropMenu implements IDropMenu {
     container: HTMLDivElement | null

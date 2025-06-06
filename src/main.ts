@@ -1,4 +1,5 @@
-import { DropMenu } from "./DropMenu"
+import { DropMenu } from "@components/DropMenu"
+import { TDropItem } from "@interfaces/TDropItem"
 import "./styles.scss"
 
 
@@ -8,5 +9,5 @@ new DropMenu({
         key: "mac",
         name: "Mac"
     },
-    onChange: item => console.log(item)
+    onChange: (item:TDropItem) => console.log(item)
 })
