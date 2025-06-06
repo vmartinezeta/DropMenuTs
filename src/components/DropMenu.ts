@@ -1,4 +1,4 @@
-import { IDropMenu } from "@/IDropMenu"
+import { IDropMenu } from "@interfaces/IDropMenu"
 import { IDropMenuProps } from "@interfaces/IDropMenuProps"
 import { TDropItem } from "@interfaces/TDropItem"
 
